@@ -17,7 +17,11 @@ namespace Gale_Shapley
         static void Main(string[] args)
         {
             int n;
+#if DEBUG
+            n = 4;
+#elif !DEBUG
             n = int.Parse(Console.ReadLine());
+#endif
             //n = 4;
             int[,] manlist = new int[n, n];
             int[,] womanlist = new int[n, n];
